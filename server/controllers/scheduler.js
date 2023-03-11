@@ -43,7 +43,7 @@ const editScheduler = async (req, res) => {
     const id = req.params.id;
 
     try {
-        const Scheduler = await Event.findOne({ _id: id });
+        const Scheduler = await Scheduler.findOne({ _id: id });
         if (Scheduler) {
             Object.assign(Scheduler, req.body);
             Scheduler.save((err, event) => {
