@@ -1,0 +1,8 @@
+.btn {
+    padding: 9px 16px;
+    gap: 5px;
+    border-radius: 22px;
+    color: inherit;
+    font-weight: inherit;
+    background: none;
+}

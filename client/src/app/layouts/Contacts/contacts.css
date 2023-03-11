@@ -1,0 +1,78 @@
+.feedback {
+    width: 100%;
+    padding: 80px 0px 80px;
+}
+.feedback__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.feedback-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0px 0px 25px 0px;
+}
+.feedback-header__line {
+    width: 30px;
+    border: 2px solid #fff;
+}
+.feedback-header__title {
+    font-size: 18px;
+}
+.feedback__title {
+    font-size: 30px;
+    color: #fff;
+    margin: 0px 0px 30px 0px;
+}
+.feedback-form {
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px 1px rgba(34, 60, 80, 0.2);
+}
+.feedback-form__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.feedback-form__label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #686868;
+    margin: 0px 0px 15px 0px;
+}
+.feedback-form__item {
+    flex: 1 1 auto;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.feedback-form__item .text-field__content {
+    width: 100%;
+}
+.feedback-form__item input {
+    width: 100%;
+    padding: 16px 14px;
+    border-radius: 10px;
+}
+.feedback-form__button {
+    font-size: 16px;
+    color: #121212;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: #fff;
+    transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+    .feedback-form__button:hover {
+        background: #000;
+        color: #3aac8e;
+    }
+}

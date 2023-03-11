@@ -1,0 +1,11 @@
+[
+    { "_id": 0, "item": "О нас", "path": "/about", "icon": "about" },
+    {
+        "_id": 1,
+        "item": "Полезные статьи",
+        "path": "/articles",
+        "icon": "articles"
+    },
+    { "_id": 2, "item": "Мои цели", "path": "/purposes", "icon": "purposes" },
+    { "_id": 3, "item": "Контакты", "path": "/contacts", "icon": "contacts" }
+]
