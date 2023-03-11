@@ -18,6 +18,7 @@ const server = require("http").createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server, { cors: { origin: clientURL } });
 const PORT = process.env.PORT || 5000;
+const routes = require("./routes/index");
 
 //cloudinary configuration
 cloudinary.config({
@@ -25,6 +26,9 @@ cloudinary.config({
     api_key: process.env.CLOUD_API_KEY,
     api_secret: process.env.CLOUD_API_SECRET
 });
+
+// Routes
+app.use("/api", routes);
 
 const start = async () => {
     try {
