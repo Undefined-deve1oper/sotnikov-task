@@ -1,6 +1,4 @@
 const router = require("express").Router();
-const Event = require("../models/Event");
-const handleError = require("../utils/schedulerErrors");
 const authorize = require("../middleware/authorization");
 const {
     createScheduler,

@@ -1,4 +1,3 @@
-const router = require("express").Router();
 const Scheduler = require("../models/Scheduler");
 const handleError = require("../utils/schedulerErrors");
 
