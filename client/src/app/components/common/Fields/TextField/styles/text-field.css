@@ -1,0 +1,64 @@
+.text-field {
+    flex: 1 1 100%;
+    width: 100%;
+    position: relative;
+}
+
+.text-field input {
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #121212;
+    border-radius: 30px;
+    padding: 16px 10px;
+    background: #f8f8f8;
+    border: 2px solid #f8f8f8;
+    min-height: 36px;
+}
+.text-field input::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #121212;
+}
+.text-field input:hover {
+    background: #fff;
+}
+
+.text-field .error input {
+    border: 2px solid red;
+}
+
+.text-field .error .text-field__icon {
+    fill: red;
+}
+.text-field__title {
+    margin: 0px 0px 10px 0px;
+}
+
+.text-field:hover .text-field__icon {
+    fill: red;
+}
+
+.text-field .text-field__icon {
+    padding: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0px, -50%);
+}
+.text-field .text-field__icon .svg-icon {
+    max-width: 18px;
+    max-height: 18px;
+    fill: #686868;
+}
+
+.text-field__content {
+    position: relative;
+}
+
+.text-field__error {
+    margin: 10px 0px 0px 0px;
+}
