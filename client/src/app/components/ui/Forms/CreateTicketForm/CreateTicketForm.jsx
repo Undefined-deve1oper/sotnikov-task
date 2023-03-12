@@ -3,7 +3,7 @@ import Button from "../../../common/Button";
 import { validatorConfig } from "./validatorConfig";
 import { toast } from "react-toastify";
 import useForm from "../../../../hooks/useForm";
-import ticketService from "../../../../services/ticket.service";
+import ticketService from "../../../../services/ticketService";
 import { CustomSelectField, TextField } from "../../../common/Fields";
 
 const initialData = {

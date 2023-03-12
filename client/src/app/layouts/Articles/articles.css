@@ -19,6 +19,9 @@
     gap: 30px;
     position: relative;
 }
+.article-card:not(:last-child) {
+    margin: 0px 0px 30px 0px;
+}
 .article-card__image {
     flex: 0 0 300px;
 }
@@ -28,4 +31,9 @@
 }
 .article-card__text {
     color: #fff;
+}
+@media (max-width: 800px) {
+    .article-card {
+        flex-wrap: wrap;
+    }
 }

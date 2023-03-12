@@ -1,5 +1,5 @@
 import { createSlice, Dispatch } from "@reduxjs/toolkit";
-import ticketService from "../../services/ticket.service";
+import ticketService from "../../services/ticketService";
 
 const initialState = {
     entities: [],
@@ -47,7 +47,7 @@ const {
 export const loadTicketsList = () => async (dispatch) => {
     dispatch(ticketRequested());
     try {
-        const { content } = await ticketService.fetchAll();
+        const content = await ticketService.fetchAll();
         dispatch(ticketReceived(content));
     } catch (error) {
         dispatch(ticketRequestFailed(error.message));

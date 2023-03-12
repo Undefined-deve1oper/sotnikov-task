@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../../common/Button";
+import "./modal.css";
 
 const TicketModal = ({ ticket, onRemoveTicket, open, onClose, ...rest }) => {
     const getCauseName = (name) => {
@@ -17,36 +18,36 @@ const TicketModal = ({ ticket, onRemoveTicket, open, onClose, ...rest }) => {
 
     return (
         <div
-            className={"modal" + (open ? " _open" : "")}
+            className={"modal_v2" + (open ? " _open" : "")}
             {...rest}
             onClick={onClose}
         >
             <div
-                className="estate-booking__modal"
+                className="estate-booking__modal_v2"
                 onClick={(e) => e.stopPropagation()}
             >
                 <div>
-                    <div className="estate-booking__modal-success_block">
+                    <div className="estate-booking__modal_v2-success_block">
                         <span className="admin__ticket-id">№{ticket._id}</span>
                     </div>
-                    <ul className="estate-booking__modal-list">
-                        <li className="estate-booking__modal-item">
-                            <span className="estate-booking__modal-info">
+                    <ul className="estate-booking__modal_v2-list">
+                        <li className="estate-booking__modal_v2-item">
+                            <span className="estate-booking__modal_v2-info">
                                 Имя: {ticket.name}
                             </span>
                         </li>
-                        <li className="estate-booking__modal-item">
-                            <span className="estate-booking__modal-info">
+                        <li className="estate-booking__modal_v2-item">
+                            <span className="estate-booking__modal_v2-info">
                                 Тип: {getCauseName(ticket.cause)}
                             </span>
                         </li>
-                        <li className="estate-booking__modal-item">
-                            <span className="estate-booking__modal-info">
+                        <li className="estate-booking__modal_v2-item">
+                            <span className="estate-booking__modal_v2-info">
                                 Email: {ticket.email}
                             </span>
                         </li>
-                        <li className="estate-booking__modal-item">
-                            <span className="estate-booking__modal-info">
+                        <li className="estate-booking__modal_v2-item">
+                            <span className="estate-booking__modal_v2-info">
                                 Сообщение: {ticket.message}
                             </span>
                         </li>

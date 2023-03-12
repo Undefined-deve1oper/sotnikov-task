@@ -21,4 +21,15 @@ const updateDPService = async (formData = {}) => {
     return data;
 };
 
-export { fetchUsersService, updateUserService, updateDPService };
+const fetchDeleteUser = async (id) => {
+    const data = await axiosConfig.delete("/users/" + id);
+    console.log(data);
+    return data;
+};
+
+export {
+    fetchUsersService,
+    updateUserService,
+    updateDPService,
+    fetchDeleteUser
+};

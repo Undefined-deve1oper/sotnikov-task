@@ -43,9 +43,10 @@ const App = () => {
     //login
     useEffect(() => {
         const user = Cookies.get("user");
-        dispatch(loadTicketsList());
-        if (user) dispatch(login(JSON.parse(user)));
-        else dispatch(login({ id: "guest", isGuest: true }));
+        if (user) {
+            dispatch(login(JSON.parse(user)));
+            dispatch(loadTicketsList());
+        } else dispatch(login({ id: "guest", isGuest: true }));
     }, [dispatch]);
 
     //get users and chats and init socket

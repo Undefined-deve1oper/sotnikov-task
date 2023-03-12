@@ -12,6 +12,12 @@
     height: 400px;
     border-radius: 50%;
 }
+@media (max-width: 450px) {
+    .art-card__image {
+        width: 280px;
+        height: 280px;
+    }
+}
 
 .art-card__image img {
     width: 100%;

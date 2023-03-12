@@ -18,7 +18,7 @@ const Articles = () => {
                     {articles.length > 0 && !isLoading ? (
                         articles.map((article) => (
                             <NavLink
-                                key={article.createdAt}
+                                key={article._id}
                                 to={`/articles/${article._id}`}
                                 className="article-card"
                             >

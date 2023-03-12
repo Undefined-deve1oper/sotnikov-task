@@ -46,4 +46,8 @@ const userSlice = createSlice({
 
 export const { login, logout, update } = userSlice.actions;
 
+export const getCurrentUserId = () => (state) => {
+    return state.user.id;
+};
+
 export default userSlice.reducer;

@@ -7,6 +7,8 @@ import Backdrop from "../components/ui/Backdrop/Backdrop";
 import EditPost from "../components/ui/EditPost/EditPost";
 import { setEditingPost } from "../store/features/postSlice";
 import ProtectedRoute from "./ProtectedRoute";
+import AdminProtectedRoute from "../components/common/ProtectedRoute";
+import Admin from "../layouts/Admin/Admin";
 
 const Posts = lazy(() => import("../layouts/Posts/Posts"));
 const SinglePost = lazy(() => import("../layouts/SinglePost/SinglePost"));
@@ -69,6 +71,7 @@ const Router = () => {
                 <Route path="/articles" element={<Articles />} />
                 <Route path="/articles/:id" element={<SingleArticle />} />
                 <Route path="/contacts" element={<Contacts />} />
+                <Route path="/admin" element={<Admin />} />
                 <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>

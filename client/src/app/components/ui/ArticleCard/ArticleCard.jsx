@@ -2,7 +2,6 @@ import React from "react";
 import "./articleCard.css";
 
 const ArticleCard = ({ item }) => {
-    console.log(item);
     return (
         <div className="art-card">
             <div className="art-card__image">
