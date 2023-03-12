@@ -3,8 +3,23 @@ const { StatusCodes } = require("http-status-codes");
 const User = require("../models/User");
 const Post = require("../models/Post");
 const uploadImage = require("../utils/uploadImage");
+const Token = require("../models/Token");
 
 const options = { new: true, runValidators: true };
+
+const deleteUser = async (req, res) => {
+    try {
+        const { userId } = req.params;
+        await User.findByIdAndDelete(userId);
+        const removedToken = await Token.findOne({ userId });
+        return res.send(null);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            message: "На сервере произошла ошибка. Попробуйте позже"
+        });
+    }
+};
 
 const getUsers = async (req, res) => {
     const { query = "", id } = req.query;
@@ -50,4 +65,4 @@ const updateDP = async (req, res) => {
     res.status(StatusCodes.OK).json({ user });
 };
 
-module.exports = { updateUser, updateDP, getUsers };
+module.exports = { updateUser, updateDP, getUsers, deleteUser };

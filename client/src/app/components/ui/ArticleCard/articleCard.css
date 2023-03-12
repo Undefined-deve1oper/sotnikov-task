@@ -1,0 +1,44 @@
+.art-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.art-card__image {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+@media (max-width: 450px) {
+    .art-card__image {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+.art-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.art-card__content {
+    padding: 20px 30px;
+    background: #fff;
+    color: #121212;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.art-card__title {
+    margin: 0px 0px 15px 0px;
+    font-weight: 700;
+}
+
+.art-card__text {
+    line-height: 170%;
+    white-space: pre-wrap;
+}

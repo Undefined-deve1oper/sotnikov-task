@@ -1,0 +1,7 @@
+.admin-page {
+    padding: 60px 0;
+    min-height: calc(87vh - 200px);
+}
+.admin-page__title {
+    margin: 30px 0;
+}

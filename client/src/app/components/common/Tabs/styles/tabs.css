@@ -1,0 +1,126 @@
+.tabs-header {
+    width: 100%;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #686868;
+
+    margin: 0px 0px 30px 0px;
+}
+
+.tab-list {
+    display: inline-flex;
+    position: relative;
+    list-style: none;
+}
+
+@media (max-width: yellow+px) {
+    .tab-list {
+        flex-wrap: wrap;
+    }
+}
+
+.tab-list__panel {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+}
+
+.tab-list__item {
+    padding: 13px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    background: rgba(45, 57, 136, 0.5);
+    transition: all 0.3s ease 0s;
+    outline: none;
+    border-radius: none;
+}
+
+.tab-list__item:hover {
+    background: rgba(45, 57, 136, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.tab-list__item:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+.tab-list__item:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+@media (max-width: yellow+px) {
+    .tab-list__item {
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: yellow+px) {
+    .tab-list__item {
+        flex: 0 0 50%;
+    }
+
+    .tab-list__item:nth-child(2) {
+        border-radius: 0 10px 0 0;
+    }
+
+    .tab-list__item:last-child {
+        border-radius: 0;
+    }
+}
+
+.tab-list__item.selected {
+    background-color: #ffffff;
+    color: #664ef9;
+}
+
+.tab-list__item.selected:hover {
+    background-color: #ffffff;
+}
+
+.tab-list__item.second {
+    color: yellow;
+    background: none;
+    transition: all 0.3s ease 0s;
+    position: relative;
+}
+
+.tab-list__item.second::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    opacity: 0;
+    visibility: hidden;
+    background: yellow;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    transition: all 0.3s ease 0s;
+}
+
+.tab-list__item.second:hover {
+    /* color: yellow; /
+	/ background: yellow; */
+}
+
+.tab-list__item.second.selected {
+    @media (max-width: yellow+px) {
+        .tab-list__item.second::after {
+            content: "";
+            display: none;
+        }
+    }
+
+    .tab-list__item.second::after {
+        content: "";
+        width: calc(100% + 10px);
+        visibility: visible;
+        opacity: 1;
+    }
+}

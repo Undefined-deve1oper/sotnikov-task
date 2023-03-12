@@ -1,0 +1,137 @@
+.modal_v2 {
+    z-index: 1000;
+    padding: 30px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    overflow: auto;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_v2::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease 0s;
+}
+
+.modal_v2._open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal_v2._open::before {
+    content: "";
+    opacity: 1;
+}
+
+.modal_v2._open .estate-booking__modal_v2 {
+    transition: all 0.8s ease 0.2s;
+    transform: scale(1) perspective(600px) translate(0px, 0%) rotateX(0deg);
+}
+
+.estate-booking__modal_v2 {
+    width: 80%;
+    transform: scale(0) perspective(600px) translate(0px, -100%) rotateX(45deg);
+    transition: all 0.8s ease 0s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f8f8f8;
+    padding: 40px;
+    color: #121212;
+    border-radius: 30px;
+}
+
+.estate-booking__modal_v2-title {
+    font-size: 24px;
+    margin: 0px 0px 30px 0px;
+}
+
+.estate-booking__modal_v2-info {
+    font-size: 20px;
+    line-height: 150%;
+    white-space: normal;
+}
+
+.estate-booking__modal_v2-list {
+    margin: 0px 0px 30px 0px;
+}
+
+.estate-booking__modal_v2-item:not(:last-child) {
+    margin: 0px 0px 15px 0px;
+}
+
+.estate-booking__modal_v2-price {
+    font-size: 24px;
+    margin: 20px 0 40px;
+}
+
+.estate-booking__modal_v2-success {
+    margin: 30px 0;
+    width: 120px;
+}
+
+.estate-booking__modal_v2-success_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 0px 20px 0px;
+}
+
+.estate-booking__button {
+    padding: 8px 15px;
+    background: blue;
+    font-size: 20px;
+    color: #f8f8f8;
+}
+
+.admin__ticket-id {
+    font-size: 20px;
+}
+
+@media (max-width: 756px) {
+    .admin__ticket-id {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 756px) {
+    .estate-booking__modal_v2-price {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 756px) {
+    .estate-booking__modal_v2-info {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 756px) {
+    .estate-booking__modal_v2-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 756px) {
+    .estate-booking__modal_v2 {
+        width: 98%;
+        padding: 20px 15px;
+    }
+}

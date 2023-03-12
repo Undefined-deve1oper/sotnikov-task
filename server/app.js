@@ -6,6 +6,8 @@ const fileUpload = require("express-fileupload");
 const express = require("express");
 const cloudinary = require("cloudinary").v2;
 const connectDB = require("./db/connect");
+const mongoose = require("mongoose");
+const initDatabase = require("./startUp/initDatabase");
 
 //security dependencies
 const helmet = require("helmet");
@@ -79,6 +81,9 @@ app.use(notFoundMiddleware);
 
 const start = async () => {
     try {
+        mongoose.connection.once("open", () => {
+            initDatabase();
+        });
         await connectDB(process.env.MONGO_URI);
         server.listen(PORT, () =>
             console.log(`Server is listening on port ${PORT}`)

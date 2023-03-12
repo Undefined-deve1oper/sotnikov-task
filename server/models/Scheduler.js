@@ -19,7 +19,7 @@ const EventSchema = new mongoose.Schema({
                 const validDate = new Date(date.setHours(date.getHours() + 1));
                 return validDate;
             },
-            "Event End must be at least one hour a head of event time"
+            "Войдите в аккаунт или зарегистрируйтесь"
         ],
         default: function () {
             const date = new Date(this.start);

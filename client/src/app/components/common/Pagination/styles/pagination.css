@@ -1,0 +1,36 @@
+.pagination {
+    display: inline-flex;
+    gap: 15px;
+    user-select: none;
+}
+
+.pagination__item {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+    position: relative;
+}
+
+.pagination__item::after {
+    content: "";
+    width: calc(100% + 11px);
+    height: 2px;
+    background: yellow;
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 2;
+    transform: translate(-50%, 0px);
+}
+
+.pagination__item._active::after {
+    display: block;
+}
+
+@media (any-hover: hover) {
+    .pagination__item:hover {
+        cursor: pointer;
+    }
+}
